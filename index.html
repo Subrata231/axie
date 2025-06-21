@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$AXIE - Axolotl World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(180deg, #E0F7FA, #B2EBF2, #81D4FA);
+      color: #263238;
+      overflow-x: hidden;
+      position: relative;
+      transition: background 0.5s ease;
+    }
+    #loader {
+      position: fixed;
+      z-index: 9999;
+      background: #4dd0e1;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeOut 1s ease 2.2s forwards;
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+    #loader img {
+      width: 150px;
+      animation: float 2s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    #main-content {
+      opacity: 0;
+      animation: fadeIn 1.2s ease 2.4s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    header {
+      text-align: center;
+      padding-top: 3rem;
+    }
+    header img.banner {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px rgba(0, 150, 136, 0.4);
+      transition: transform 0.3s ease;
+    }
+    header img.banner:hover {
+      transform: scale(1.02);
+    }
+
+    .logo {
+      display: block;
+      margin: 2rem auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: rotate(4deg) scale(1.05);
+    }
+
+    #contract-address {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      color: #004D40;
+      font-style: italic;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffffcc;
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #00695C;
+    }
+
+    p, li {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #37474F;
+      text-align: center;
+    }
+
+    .button {
+      background: #00BCD4;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      margin: 1rem;
+      border-radius: 40px;
+      box-shadow: 0 4px 15px rgba(0,188,212,0.4);
+      cursor: pointer;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .x-button {
+      background: #111;
+      color: #fff;
+    }
+
+    .x-button:hover {
+      background: #000;
+    }
+
+    .button:hover {
+      background: #00838F;
+      transform: translateY(-2px);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 18px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #4dd0e1;
+      color: #004D40;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      margin-top: 3rem;
+    }
+      @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.85; }
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <img src="https://s14.gifyu.com/images/bxAh4.gif" alt="AXO Loader" />
+  </div>
+
+  <div id="main-content">
+    <header>
+      <img src="https://i.postimg.cc/W1TmB9Rt/IMG-20250607-160735-563.png" alt="$AXIE Banner" class="banner" />
+    </header>
+
+    <img src="https://i.postimg.cc/kgR9dyx3/image.png" alt="$AXIE Logo" class="logo" />
+
+    <div id="contract-address">
+      <strong>Contract Address:</strong><br />
+      Coming soon after launch!
+    </div>
+
+    <section>
+      <h2>🪸The Lore of $AXIE🪸</h2>
+      <p>
+        From the glittering axolotl eggs hatched a single being — AXIE, the cosmic amphibian. Born under the auroras of Solana, AXIE glows with meme magic.
+      </p>
+      <p>
+        With each moon, AXIE evolves — growing fins of fortune, eyes of insight, and a tail that whips through blockchains. Holders become disciples of transformation and chaos in cuteness.
+      </p>
+    </section>
+
+    <section>
+      <h2>⚓Buy $AXIE⚓</h2>
+      <p>Axie Vibes: Regenerate, Celebrate, Rise!</p>
+      <div style="text-align:center;">
+        <button class="button" onclick="window.open('https://pump.fun', '_blank')">Buy on LetsBonk</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>🪼Bliss Gallery🪼</h2>
+      <div class="gallery">
+        <img src="https://i.postimg.cc/NFnkJLY3/image.png" alt="Bliss Image 1" />
+        <img src="https://i.postimg.cc/c1cHQPTc/image.png" alt="Bliss Image 2" />
+        <img src="https://i.postimg.cc/K4XJc4Vn/image.png" alt="Bliss Image 3" />
+      </div>
+    </section>
+
+    <section>
+      <h2>🫧 Join the $AXIE Community🫧</h2>
+      <p>Swim along with us through Telegram and X!</p>
+      <div style="text-align:center;">
+        <button class="button" onclick="window.open('https://t.me/yourtelegram', '_blank')">Telegram</button>
+        <button class="button x-button" onclick="window.open('https://twitter.com/yourtwitter', '_blank')">X</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧸 Axie Merchandise🧸</h2>
+      <p>Snuggle with joy! Axie (Axolotl) plushies are coming soon. Get ready to collect the cutest Axie companions!</p>
+      <div class="gallery">
+        <img src="https://i.postimg.cc/vZk8Gr96/b9894d06bfec99357fd31a928a1f17b6.jpg" alt="Plushie 1" style="filter: blur(6px); max-width: 220px; border-radius: 18px; animation: pulse 2.5s infinite ease-in-out;" />
+        <img src="https://i.postimg.cc/4yWZqVsy/Ge-F6qc3-Ww-AA3i4-N.jpg" alt="Plushie 2" style="filter: blur(6px); max-width: 220px; border-radius: 18px; animation: pulse 2.5s infinite ease-in-out;" />
+        <img src="https://i.postimg.cc/jjfx2DQ3/Gt-Vy-Sr-Nb-MAIYXXU.png" alt="Plushie 3" style="filter: blur(6px); max-width: 220px; border-radius: 18px; animation: pulse 2.5s infinite ease-in-out;" />
+        <img src="https://i.postimg.cc/bwsNXCGh/H942738e780a04d908a6c6f4a8142bcaba-jpg-720x720q50.avif" alt="Plushie 4" style="filter: blur(6px); max-width: 220px; border-radius: 18px; animation: pulse 2.5s infinite ease-in-out;" />
+      </div>
+      <p style="margin-top: 1rem; font-style: italic;">🛍️ Merchandise Store Coming Soon!</p>
+    </section>
+
+    <footer>
+      © 2025 $AXIE Project — Axolotl Love & Smile 💙
+    </footer>
+  </div>
+</body>
+</html>
